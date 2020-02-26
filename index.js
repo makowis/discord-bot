@@ -35,6 +35,6 @@ const hock_token = process.env.DISCORD_HOCK_TOKEN
 const hook = new Discord.WebhookClient(hock_id, hock_token);
 
 // Send a message using the webhook
-cron.schedule('* 15 * * *', () => {
+cron.schedule('0 15 * * *', () => {
   hook.send('みんなアクティブ体操やろう！ https://www.youtube.com/watch?v=KPxt7vyQ6Zo');
 });
