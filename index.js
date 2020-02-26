@@ -36,5 +36,18 @@ const hook = new Discord.WebhookClient(hock_id, hock_token);
 
 // Send a message using the webhook
 cron.schedule('0 15 * * *', () => {
-  hook.send('みんなアクティブ体操やろう！ https://www.youtube.com/watch?v=KPxt7vyQ6Zo');
+  var today = new Date();
+  if (!isWeekend(today)) {
+    hook.send('みんなアクティブ体操やろう！ https://www.youtube.com/watch?v=KPxt7vyQ6Zo');
+  }
 });
+
+function isWeekend(today){
+  var dayNum = today.getDay();//Date.getDay()は曜日番号として日曜始まりで0~6の値を返す
+
+  if(dayNum == 0 || dayNum == 6){
+    return true;
+  }
+
+  return false;
+}
