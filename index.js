@@ -5,8 +5,9 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.DISCORD_TOKEN;
+
 client.on('ready', () => {
-    console.log('ready...');
+  console.log('ready...');
 });
 
 client.on('message', message =>{
@@ -25,3 +26,15 @@ client.on('message', message =>{
 });
 
 client.login(token);
+
+const cron = require('node-cron');
+
+// Create a new webhook
+const hock_id = process.env.DISCORD_HOCK_ID
+const hock_token = process.env.DISCORD_HOCK_TOKEN
+const hook = new Discord.WebhookClient(hock_id, hock_token);
+
+// Send a message using the webhook
+cron.schedule('* 15 * * *', () => {
+  hook.send('みんなアクティブ体操やろう！ https://www.youtube.com/watch?v=KPxt7vyQ6Zo');
+});
