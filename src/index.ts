@@ -1,7 +1,5 @@
+import "./lib/env" // 設定を.envからロード
 import * as Discord from 'discord.js'
-
-// 設定を.envからロード
-require("dotenv").config();
 
 //ログイン処理
 const client = new Discord.Client();
