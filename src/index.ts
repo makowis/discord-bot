@@ -13,6 +13,7 @@ client.on("message", message => {
   if (message.author.bot) {
     return;
   }
+  
   if (message.content.match(/ご安全に/)) {
     let reply_text = `アクティブ体操やれ！ https://www.youtube.com/watch?v=KPxt7vyQ6Zo`;
     message
@@ -40,8 +41,7 @@ client.on("message", message => {
     return;
   }
 
-
-  if (message.content == '藤原竜也') {
+  if (message.content.match(/藤原竜也/)) {
     let reply_text = `ど゛う゛し゛て゛な゛ん゛だ゛よ゛お゛お゛ぉ゛お゛！゛！゛！゛ん゛あ゛あ゛あ゛あ゛あ゛ぁ゛ぁ゛あ゛あ゛！゛！゛！゛！゛`;
     message
       .reply(reply_text)
