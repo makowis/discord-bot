@@ -23,7 +23,16 @@ client.on("message", message => {
   }
 
   if (message.content == 'oha') {
-    let reply_text = `おはようございます！今日も1日頑張りましょう♪`;
+    let reply_text = `おはようございますご主人様♪今日も1日頑張りましょう♪`;
+    message
+      .reply(reply_text)
+      .then(() => console.log(`Sent message: ${reply_text}`))
+      .catch(console.error);
+    return;
+  }
+
+  if (message.content == 'ただいま') {
+    let reply_text = `おかえりなさいませ！ご主人様♪`;
     message
       .reply(reply_text)
       .then(() => console.log(`Sent message: ${reply_text}`))
