@@ -21,6 +21,15 @@ client.on("message", message => {
       .catch(console.error);
     return;
   }
+
+  if (message.content == 'oha') {
+    let reply_text = `おはようございます！今日も1日頑張りましょう♪`;
+    message
+      .reply(reply_text)
+      .then(() => console.log(`Sent message: ${reply_text}`))
+      .catch(console.error);
+    return;
+  }
 });
 
 client.login(token);
