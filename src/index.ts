@@ -39,6 +39,16 @@ client.on("message", message => {
       .catch(console.error);
     return;
   }
+
+
+  if (message.content == '藤原竜也') {
+    let reply_text = `ど゛う゛し゛て゛な゛ん゛だ゛よ゛お゛お゛ぉ゛お゛！゛！゛！゛ん゛あ゛あ゛あ゛あ゛あ゛ぁ゛ぁ゛あ゛あ゛！゛！゛！゛！゛`;
+    message
+      .reply(reply_text)
+      .then(() => console.log(`Sent message: ${reply_text}`))
+      .catch(console.error);
+    return;
+  }  
 });
 
 client.login(token);
