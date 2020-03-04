@@ -36,7 +36,12 @@ client.on("message", message => {
     let reply_text = `ど゛う゛し゛て゛な゛ん゛だ゛よ゛お゛お゛ぉ゛お゛！゛！゛！゛ん゛あ゛あ゛あ゛あ゛あ゛ぁ゛ぁ゛あ゛あ゛！゛！゛！゛！゛`;
     reply(message, reply_text);
     return;
-  }  
+  }
+
+  if (message.content.match(/(糞|くそ)/)) {
+    let reply_text = `誰をお掃除してくればいいですか？ご主人様♪`;
+    reply(message, reply_text);
+  }
 });
 
 client.login(token);
