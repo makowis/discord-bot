@@ -38,7 +38,7 @@ client.on("message", message => {
     return;
   }
 
-  if (message.content.match(/(糞|くそ)/)) {
+  if (message.content.match(/(糞|クソ)/)) {
     let reply_text = `誰をお掃除してくればいいですか？ご主人様♪`;
     reply(message, reply_text);
     return;
