@@ -1,5 +1,6 @@
 import './lib/env' // 設定を.envからロード
 import * as Discord from 'discord.js'
+import reply from './lib/reply'
 
 //ログイン処理
 const client = new Discord.Client();
@@ -46,10 +47,3 @@ client.on("message", message => {
 });
 
 client.login(token);
-
-const reply = (message: Discord.Message, reply_text: string) => {
-  message
-  .reply(reply_text)
-  .then(() => console.log(`Sent message: ${reply_text}`))
-  .catch(console.error);
-}
