@@ -44,6 +44,15 @@ client.on("message", message => {
     reply(message, reply_text);
     return;
   }
+
+  if (message.content == 'さあ、始まるざますよ') {
+    let reply_text = `行くでガンス`;
+    message.channel
+    .send(reply_text)
+    .then(() => console.log(`Sent message: ${reply_text}`))
+    .catch(console.error);
+    return;
+  }
 });
 
 client.login(token);
